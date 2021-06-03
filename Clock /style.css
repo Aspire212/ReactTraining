@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #1CB572;
+}
+#react-app{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.field{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numberTime{
+    position: absolute;
+    top: 100px;
+    left: 160px;
+    color: #4892D7;
+    z-index: 5;
+    font-size: 18px;
+}
+.seconds{
+    position: absolute;
+    top: 20px;
+    width: 2px;
+    height: 180px;
+    left: 199px;
+    background: #DE4A0C;
+    transform-origin: 50% 100%;
+    z-index: 2;
+}
+
+.minutes {
+    position: absolute;
+    top: 50px;
+    width: 4px;
+    height: 150px;
+    left: 198px;
+    background: #06500A;
+    transform-origin: 50% 100%;
+}
+
+.hours{
+    position: absolute;
+    top: 80px;
+    width: 6px;
+    height: 120px;
+    left: 197px;
+    background: #06500A;
+    transform-origin: 50% 100%;
+}
+
+.unitHour{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #CCC9D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%);
+    color: #4892D7;
+    position: absolute;
+    font-size: 18px;
+}
