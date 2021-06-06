@@ -1,6 +1,7 @@
 import React,{ Component } from 'react';
 import ReactDOM from 'react-dom';
-const list = ['привет', 'пока', 'здравствуй', 'досвидания', 'день', 'ночь', 'полдень'];
+
+const list = ['привет', 'пока', 'здравствуй', 'досвидания', 'день', 'ночь', 'полдень', 'завтрак', 'обед', 'ужин', 'полдник',];
 
 class App extends Component {
   constructor(props) {
@@ -11,17 +12,16 @@ class App extends Component {
       chbx: false,
     }
   }
+  
   handleCheck = (e) => {
     let tempList = [...this.props.list]
     e.target.checked ? this.setState({ list: tempList.sort(), chbx: true }) : this.setState({ list: this.props.list, chbx: false })
   }
 
   handleChange = (e) => {
-    this.setState({ list: this.props.list.filter(word => word.includes(e.target.value)), input: e.target.value })
+    this.setState({ list: this.props.list.filter(word => word.includes(e.target.value.toLowerCase())), input: e.target.value })
   }
-  filterList(list, input) {
-    return list.filter(el => el.includes(input.value))
-  }
+
 
   clear = () => {
     if (this.state.input || this.state.chbx) {

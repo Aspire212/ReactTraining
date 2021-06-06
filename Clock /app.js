@@ -11,7 +11,7 @@ class Clock extends Component {
         radius: 40,
         hourDots: 12,
         deg: 360,
-        hourPos: 90,  
+        hourPos: 90,
         translate: 50,
     };
     
@@ -21,7 +21,7 @@ class Clock extends Component {
         hour: new Date().getHours(),
         hourItem: Array(12).fill('id'),
     };
-    ql
+    
     this.setPosition = this.setPosition.bind(this);
     this.getCurrentTime = this.getCurrentTime.bind(this);
   }
